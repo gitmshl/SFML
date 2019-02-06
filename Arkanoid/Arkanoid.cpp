@@ -1,4 +1,3 @@
-///Arkanoid 06.02.18 (00:50, хотя в реальности уже 7)
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
@@ -139,7 +138,7 @@ float player::approcsimation()
     {
         ty = y_ball/((-1) * dy_ball);
     }
-    else ty= 99999; /// очень большое число
+    else ty= 99999; /// Г®Г·ГҐГ­Гј ГЎГ®Г«ГјГёГ®ГҐ Г·ГЁГ±Г«Г®
 
     Y = y_ball + dy_ball * tx;
     if (smart && ty < tx)
@@ -161,7 +160,7 @@ float Enemy::approcsimation()
     {
         ty = y_ball/((-1) * dy_ball);
     }
-    else ty= 99999; /// очень большое число
+    else ty= 99999; /// Г®Г·ГҐГ­Гј ГЎГ®Г«ГјГёГ®ГҐ Г·ГЁГ±Г«Г®
 
     Y = y_ball + dy_ball * tx;
     if (smart && ty < tx)
@@ -209,7 +208,7 @@ void Ball::CollisionX()
     float p1 = x_ball + radius_ball;
     float q0 = y_ball - radius_ball;
     float q = y_ball + radius_ball;
-/// для player
+/// Г¤Г«Гї player
     if (p0 < p.x + p.width && p1 > p.x + p.width)
     {
         if (!((q < p.y) || (q0 > p.y + p.height)))
@@ -232,7 +231,7 @@ void Ball::CollisionX()
         }
     }
 
-   /// Для Enemy
+   /// Г„Г«Гї Enemy
     if (p1 > enemy.x && p0 < enemy.x)
     {
         if (!((q < enemy.y) || (q0 > enemy.y + enemy.height)))
@@ -265,7 +264,7 @@ void Ball::CollisionY()
     else if (q > Height) {dy *= -1; y_ball = Height - radius_ball;}
 }
 
-float rand_speed(float g) /// g - граница ( <= 1)
+float rand_speed(float g) /// g - ГЈГ°Г Г­ГЁГ¶Г  ( <= 1)
 {
     int d = g*1000;
     d = 2 * (rand()%d);
@@ -333,7 +332,7 @@ int main()
     enemy.update(time);
 
     ball.update(time);
-       window.clear(Color::Cyan); /// Magenta - фиолетовый
+       window.clear(Color::Cyan); /// Magenta - ГґГЁГ®Г«ГҐГІГ®ГўГ»Г©
 
         window.draw(p.rect);
         window.draw(enemy.rect);
