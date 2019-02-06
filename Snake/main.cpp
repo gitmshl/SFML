@@ -1,4 +1,3 @@
-// Это великолепное творени создано 8.06.18 в 23:17
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <windows.h>
